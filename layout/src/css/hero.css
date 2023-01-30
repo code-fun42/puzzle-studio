@@ -1,0 +1,8 @@
+.hero__picture {
+    pointer-events: none;
+}
+
+.hero__link {
+    background-color: #AB3E00;
+    border-radius: 10px;
+}

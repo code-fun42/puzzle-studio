@@ -7,24 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PUZZLE.DEV</title>
     <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/global.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="container flex justify-between items-center mx-auto py-2 header__container">
+    <header class="fixed top-0 left-0 right-0 z-20 header">
+        <div class="container flex justify-between items-center mx-auto sm:py-2 py-1 header__container">
             <a href="#" class="header__logo-link">
-                <img class="header__logo-img" src="/layout/src/img/header-logo.svg" alt="PUZZLE.DEV">
+                <picture class="header__logo-picture">
+                    <!-- <source srcset="/layout/src/img/header-logo.svg" type="image/svg+xml"> -->
+                    <source srcset="./src/img/header-logo-mobile.svg" media="(max-width: 640px)" type="image/svg+xml">
+                    <img src="./src/img/header-logo.svg" alt="logo">
+                </picture>
             </a>
-            <nav class="flex items-center max-w-xl w-full header__nav">
-                <ul class="flex flex-wrap justify-between w-full items-center header__list font-serif text-2xl">
+            <nav class="lg:flex items-center max-w-xl w-full hidden header__nav">
+                <ul class="flex flex-wrap justify-between w-full items-center header__list text-2xl">
                     <li class="header__item"><a href="" class="header__item-link">О нас</a></li>
                     <li class="header__item"><a href="" class="header__item-link">Услуги</a></li>
                     <li class="header__item"><a href="" class="header__item-link">Цены</a></li>
                     <li class="header__item"><a href="" class="header__item-link">Контакты</a></li>
                 </ul>
             </nav>
+            <div class="lg:hidden flex w-10 h-9 header__burger">
+                <button class="relative w-10 h-9 header__burger-btn">
+                    <span class="absolute top-0 flex w-10 h-1 header__burger-line header__burger-line-1"></span>
+                    <span class="absolute top-4 flex w-10 h-1 header__burger-line header__burger-line-2"></span>
+                    <span class="absolute top-8 flex w-10 h-1 header__burger-line header__burger-line-3"></span>
+                </button>
+            </div>
         </div>
     </header>
+    <main class="sm:mt-24 mt-16 main">
+        <section class="hero">
+            <div class="relative flex container lg:min-h-[533px] sm:min-h-[448px] min-h-[323px] m-auto hero__container">
+                <div class="z-10 flex flex-col sm:items-start items-center xl:mt-[118px] lg:mt-[144px] sm:mt-[95px] mt-[33px] w-full sm:text-left text-center hero__block">
+                    <h1 class="lg:mb-[11px] sm:mb-[24px] mb-[19px] 2xl:text-[56px] xl:text-[50px] lg:text-[37px] sm:text-[33px] text-[21px] xl:leading-[66px] lg:leading-[50px] sm:leading-[45px] leading-[25px] hero__title">
+                        Привет!<br/>Мы студия &lt PUZZLE.DEV /&gt</h1>
+                    <span class="2xl:mb-[55px] xl:mb-[48px] sm:mb-[42px] mb-[28px] xl:max-w-[539px] lg:max-w-[310px] sm:max-w-[280px] max-w-[220px] 2xl:text-[26px] xl:text-[22px] sm:text-[18px] text-[14px] text-slate-500 hero__span">
+                        разрабатываем digital-продукты, за плечами большой опыт в разработке.
+                    </span>
+                    <a href="#" class="md:pt-2.5 pt-1 2xl:w-[338px] md:w-[292px] w-[220px] md:h-[66px] h-[43px] md:text-[26px] text-[20px] text-slate-50 text-center hero__link">Связаться с нами</a>
+                </div>
+                <picture class="absolute sm:flex hidden bottom-0 right-[5px] hero__picture">
+                    <source srcset="./src/img/hero-bg-320.svg" media="(max-width: 640px)" type="image/svg+xml">
+                    <source srcset="./src/img/hero-bg-768.svg" media="(max-width: 1024px)" type="image/svg+xml">
+                    <source srcset="./src/img/hero-bg-1024.svg" media="(max-width: 1280px)" type="image/svg+xml">
+                    <img src="./src/img/hero-bg.svg" alt="">
+                </picture>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
