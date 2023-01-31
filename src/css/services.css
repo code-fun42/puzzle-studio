@@ -1,0 +1,35 @@
+.services__item {
+    background-position: center top;    
+    background-repeat: no-repeat;
+}
+
+.services__item-1 {
+    background-image: url('../img/services-icon-1.svg');
+}
+
+.services__item-2 {
+    background-image: url('../img/services-icon-2.svg');
+}
+
+.services__item-3 {
+    background-image: url('../img/services-icon-3.svg');
+}
+
+.services__link {
+    background-color: #AB3E00;
+    border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+    .services__item-1 {
+        background-image: url('../img/services-icon-1-768.svg');
+    }
+    
+    .services__item-2 {
+        background-image: url('../img/services-icon-2-768.svg');
+    }
+    
+    .services__item-3 {
+        background-image: url('../img/services-icon-3-768.svg');
+    }
+}
