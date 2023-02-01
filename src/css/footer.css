@@ -1,0 +1,31 @@
+.footer {
+    background-color: #fbfbfb;
+}
+
+.footer__contacts-item {
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.footer__contacts-item-1 {
+    background-image: url('../img/footer-contacts-mail.svg');
+}
+
+.footer__contacts-item-2 {
+    background-image: url('../img/footer-contacts-tel.svg');
+}
+
+.footer__socnet-link {
+    color: gray;
+    transition: color .3s linear, background .3s linear;
+}
+
+.footer__socnet-link:hover,
+.footer__socnet-link:active,
+.footer__socnet-link:focus {
+    color: rgb(196, 117, 27);
+}
+
+.footer__line {
+    background-color: #2D2955;
+}
