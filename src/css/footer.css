@@ -16,7 +16,7 @@
 }
 
 .footer__socnet-link {
-    color: gray;
+    color: #808080;
     transition: color .3s linear, background .3s linear;
 }
 

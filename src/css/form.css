@@ -1,0 +1,14 @@
+.form__textarea,
+.form__input {
+    background-color: #EEEEEE;
+    border-radius: 10px;
+}
+
+.form__textarea {
+    resize: none;
+}
+
+.form__submit {
+    background-color: #AB3E00;
+    border-radius: 10px;
+}

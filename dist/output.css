@@ -601,6 +601,10 @@ video {
   margin: auto;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -634,6 +638,26 @@ video {
   margin-bottom: 26px;
 }
 
+.mb-\[\] {
+  margin-bottom: ;
+}
+
+.mb-\[30px\] {
+  margin-bottom: 30px;
+}
+
+.mb-\[22px\] {
+  margin-bottom: 22px;
+}
+
+.mb-\[10px\] {
+  margin-bottom: 10px;
+}
+
+.mb-\[35px\] {
+  margin-bottom: 35px;
+}
+
 .flex {
   display: flex;
 }
@@ -654,6 +678,22 @@ video {
   height: 43px;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
+.h-\[125px\] {
+  height: 125px;
+}
+
+.h-\[65px\] {
+  height: 65px;
+}
+
 .min-h-\[323px\] {
   min-height: 323px;
 }
@@ -666,24 +706,8 @@ video {
   min-height: 150px;
 }
 
-.min-h-\[300px\] {
-  min-height: 300px;
-}
-
-.min-h-\[350px\] {
-  min-height: 350px;
-}
-
 .min-h-\[330px\] {
   min-height: 330px;
-}
-
-.min-h-\[\] {
-  min-height: ;
-}
-
-.min-h-\[75px\] {
-  min-height: 75px;
 }
 
 .min-h-\[70px\] {
@@ -702,6 +726,14 @@ video {
   width: 220px;
 }
 
+.w-\[\] {
+  width: ;
+}
+
+.w-\[215px\] {
+  width: 215px;
+}
+
 .max-w-xl {
   max-width: 36rem;
 }
@@ -716,6 +748,14 @@ video {
 
 .max-w-\[157px\] {
   max-width: 157px;
+}
+
+.max-w-\[\] {
+  max-width: ;
+}
+
+.max-w-\[462px\] {
+  max-width: 462px;
 }
 
 .flex-col {
@@ -749,11 +789,6 @@ video {
   padding-bottom: 53px;
 }
 
-.py-\[\] {
-  padding-top: ;
-  padding-bottom: ;
-}
-
 .py-\[30px\] {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -762,6 +797,26 @@ video {
 .py-\[16px\] {
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+.py-\[50px\] {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.py-\[12px\] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.px-\[33px\] {
+  padding-left: 33px;
+  padding-right: 33px;
+}
+
+.py-\[70px\] {
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .pt-1 {
@@ -774,10 +829,6 @@ video {
 
 .pl-\[40px\] {
   padding-left: 40px;
-}
-
-.pt-\[16px\] {
-  padding-top: 16px;
 }
 
 .text-center {
@@ -801,12 +852,16 @@ video {
   font-size: 20px;
 }
 
+.text-\[22px\] {
+  font-size: 22px;
+}
+
 .text-\[17px\] {
   font-size: 17px;
 }
 
-.text-\[22px\] {
-  font-size: 22px;
+.text-\[47px\] {
+  font-size: 47px;
 }
 
 .leading-\[25px\] {
@@ -872,10 +927,6 @@ video {
     max-width: 280px;
   }
 
-  .sm\:max-w-\[157px\] {
-    max-width: 157px;
-  }
-
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -892,11 +943,6 @@ video {
   .sm\:py-\[60px\] {
     padding-top: 60px;
     padding-bottom: 60px;
-  }
-
-  .sm\:py-\[30px\] {
-    padding-top: 30px;
-    padding-bottom: 30px;
   }
 
   .sm\:py-\[50px\] {
