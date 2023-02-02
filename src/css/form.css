@@ -11,4 +11,11 @@
 .form__submit {
     background-color: #AB3E00;
     border-radius: 10px;
+    transition: background-color .3s linear;
+}
+
+.form__submit:hover,
+.form__submit:active,
+.form__submit:focus {
+    background-color: rgb(196, 117, 27);
 }

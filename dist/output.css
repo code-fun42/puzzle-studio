@@ -593,14 +593,6 @@ video {
   z-index: 20;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
-.order-1 {
-  order: 1;
-}
-
 .-order-1 {
   order: -1;
 }
@@ -614,12 +606,12 @@ video {
   margin-right: auto;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .mt-\[33px\] {
   margin-top: 33px;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mb-\[19px\] {
@@ -654,32 +646,20 @@ video {
   margin-bottom: 22px;
 }
 
-.mt-\[\] {
-  margin-top: ;
+.mt-\[2px\] {
+  margin-top: 2px;
 }
 
-.mt-\[30px\] {
-  margin-top: 30px;
+.mt-\[3px\] {
+  margin-top: 3px;
 }
 
-.mt-\[50px\] {
-  margin-top: 50px;
-}
-
-.mb-\[50px\] {
-  margin-bottom: 50px;
-}
-
-.mb-\[20px\] {
-  margin-bottom: 20px;
+.mt-\[4px\] {
+  margin-top: 4px;
 }
 
 .flex {
   display: flex;
-}
-
-.inline-flex {
-  display: inline-flex;
 }
 
 .hidden {
@@ -710,8 +690,8 @@ video {
   height: 65px;
 }
 
-.min-h-\[323px\] {
-  min-height: 323px;
+.min-h-\[500px\] {
+  min-height: 500px;
 }
 
 .min-h-\[490px\] {
@@ -730,20 +710,8 @@ video {
   min-height: 70px;
 }
 
-.min-h-\[\] {
-  min-height: ;
-}
-
-.min-h-\[525px\] {
-  min-height: 525px;
-}
-
-.min-h-\[5px\] {
-  min-height: 5px;
-}
-
-.min-h-\[500px\] {
-  min-height: 500px;
+.min-h-\[2px\] {
+  min-height: 2px;
 }
 
 .w-full {
@@ -762,6 +730,10 @@ video {
   width: 215px;
 }
 
+.w-0 {
+  width: 0px;
+}
+
 .max-w-xl {
   max-width: 36rem;
 }
@@ -774,20 +746,12 @@ video {
   max-width: 170px;
 }
 
-.max-w-\[462px\] {
-  max-width: 462px;
-}
-
-.max-w-\[157px\] {
-  max-width: 157px;
-}
-
 .max-w-\[500px\] {
   max-width: 500px;
 }
 
-.flex-row {
-  flex-direction: row;
+.max-w-\[157px\] {
+  max-width: 157px;
 }
 
 .flex-col {
@@ -809,6 +773,11 @@ video {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.py-\[50px\] {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .py-\[37px\] {
@@ -844,26 +813,6 @@ video {
 .py-\[16px\] {
   padding-top: 16px;
   padding-bottom: 16px;
-}
-
-.py-\[10pz\] {
-  padding-top: 10pz;
-  padding-bottom: 10pz;
-}
-
-.py-\[10px\] {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.py-\[40px\] {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.py-\[50px\] {
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .pt-1 {
@@ -925,13 +874,17 @@ video {
   background-color: green;
 }
 
-@media (min-width: 640px) {
-  .sm\:mt-24 {
-    margin-top: 6rem;
-  }
+.hover\:w-full:hover {
+  width: 100%;
+}
 
+@media (min-width: 640px) {
   .sm\:mt-\[95px\] {
     margin-top: 95px;
+  }
+
+  .sm\:mt-24 {
+    margin-top: 6rem;
   }
 
   .sm\:mb-\[24px\] {
@@ -954,8 +907,8 @@ video {
     display: flex;
   }
 
-  .sm\:min-h-\[448px\] {
-    min-height: 448px;
+  .sm\:min-h-\[620px\] {
+    min-height: 620px;
   }
 
   .sm\:min-h-0 {
@@ -964,18 +917,6 @@ video {
 
   .sm\:min-h-\[210px\] {
     min-height: 210px;
-  }
-
-  .sm\:min-h-\[px\] {
-    min-height: px;
-  }
-
-  .sm\:min-h-\[650px\] {
-    min-height: 650px;
-  }
-
-  .sm\:min-h-\[620px\] {
-    min-height: 620px;
   }
 
   .sm\:max-w-\[280px\] {
@@ -1089,14 +1030,6 @@ video {
     margin-bottom: 49px;
   }
 
-  .lg\:mt-0 {
-    margin-top: 0px;
-  }
-
-  .lg\:mb-0 {
-    margin-bottom: 0px;
-  }
-
   .lg\:flex {
     display: flex;
   }
@@ -1113,6 +1046,10 @@ video {
     min-height: 240px;
   }
 
+  .lg\:max-w-\[477px\] {
+    max-width: 477px;
+  }
+
   .lg\:max-w-\[310px\] {
     max-width: 310px;
   }
@@ -1123,18 +1060,6 @@ video {
 
   .lg\:max-w-\[220px\] {
     max-width: 220px;
-  }
-
-  .lg\:max-w-\[\] {
-    max-width: ;
-  }
-
-  .lg\:max-w-\[475px\] {
-    max-width: 475px;
-  }
-
-  .lg\:max-w-\[477px\] {
-    max-width: 477px;
   }
 
   .lg\:flex-row {
@@ -1188,6 +1113,10 @@ video {
     margin-bottom: 48px;
   }
 
+  .xl\:max-w-\[645px\] {
+    max-width: 645px;
+  }
+
   .xl\:max-w-\[539px\] {
     max-width: 539px;
   }
@@ -1198,26 +1127,6 @@ video {
 
   .xl\:max-w-\[250px\] {
     max-width: 250px;
-  }
-
-  .xl\:max-w-\[\] {
-    max-width: ;
-  }
-
-  .xl\:max-w-\[717\] {
-    max-width: 717;
-  }
-
-  .xl\:max-w-\[717px\] {
-    max-width: 717px;
-  }
-
-  .xl\:max-w-\[640px\] {
-    max-width: 640px;
-  }
-
-  .xl\:max-w-\[645px\] {
-    max-width: 645px;
   }
 
   .xl\:py-\[70px\] {

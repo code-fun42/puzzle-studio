@@ -24,4 +24,11 @@
 .hero__link {
     background-color: #AB3E00;
     border-radius: 10px;
+    transition: background-color .3s linear;
+}
+
+.hero__link:hover,
+.hero__link:active,
+.hero__link:focus {
+    background-color: rgb(196, 117, 27);
 }

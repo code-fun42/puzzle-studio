@@ -24,6 +24,7 @@
 .footer__socnet-link:active,
 .footer__socnet-link:focus {
     color: rgb(196, 117, 27);
+    /* color: #AB3E00; */
 }
 
 .footer__line {
