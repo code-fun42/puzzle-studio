@@ -3,8 +3,23 @@
 }
 
 .hero__picture {
-    pointer-events: none;
+    transition: bottom .3s linear;
 }
+
+/* @media (max-width: 1024px) {
+    .hero__picture:hover,
+    .hero__picture:active,
+    .hero__picture:focus {
+        margin-bottom: 40px;
+    }
+} */
+
+@media (min-width: 1024px) {
+    .hero__picture:hover {
+        bottom: 20px;
+    }
+}
+
 
 .hero__link {
     background-color: #AB3E00;

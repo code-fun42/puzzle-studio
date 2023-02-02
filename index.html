@@ -40,26 +40,34 @@
             </div>
         </div>
     </header>
+    <!-- xl:mt-[118px] lg:mt-[144px] sm:mt-[95px] mt-[33px] -->
     <main class="sm:mt-24 mt-16 main">
-        <section class="hero">
-            <div class="relative flex container lg:min-h-[533px] sm:min-h-[448px] min-h-[323px] m-auto hero__container">
-                <div class="z-10 flex flex-col sm:items-start items-center xl:mt-[118px] lg:mt-[144px] sm:mt-[95px] mt-[33px] w-full sm:text-left text-center hero__block">
-                    <h1 class="lg:mb-[11px] sm:mb-[24px] mb-[19px] 2xl:text-[56px] xl:text-[50px] lg:text-[37px] sm:text-[33px] text-[21px] xl:leading-[66px] lg:leading-[50px] sm:leading-[45px] leading-[25px] hero__title">
+        <section class="hero" id="hero">
+            <div class="flex lg:flex-row flex-col items-center justify-between lg:py-0 py-[50px] container lg:min-h-[533px] sm:min-h-[620px] min-h-[500px] m-auto hero__container">
+                <div class="flex lg:items-start items-center flex-col 2xl:max-w-[720px] xl:max-w-[645px] lg:max-w-[477px] w-full lg:mih-h-0 sm:text-left hero__block">
+                    <h1 class="lg:mb-[11px] sm:mb-[24px] mb-[19px] 2xl:text-[56px] xl:text-[50px] lg:text-[37px] sm:text-[33px] text-[21px] xl:leading-[66px] lg:leading-[50px] sm:leading-[45px] leading-[25px] lg:text-start text-center hero__title">
                         Привет!<br/>Мы студия &lt PUZZLE.DEV /&gt</h1>
-                    <span class="2xl:mb-[55px] xl:mb-[48px] sm:mb-[42px] mb-[28px] xl:max-w-[539px] lg:max-w-[310px] sm:max-w-[280px] max-w-[220px] 2xl:text-[26px] xl:text-[22px] sm:text-[18px] text-[14px] text-slate-500 hero__span">
+                    <span class="2xl:mb-[55px] xl:mb-[48px] sm:mb-[42px] mb-[28px] xl:max-w-[539px] lg:max-w-[310px] sm:max-w-[280px] max-w-[220px] 2xl:text-[26px] xl:text-[22px] sm:text-[18px] text-[14px] text-slate-500 lg:text-start text-center hero__span">
                         разрабатываем digital-продукты, за плечами большой опыт в разработке.
                     </span>
                     <a href="#" class="md:pt-2.5 pt-1 2xl:w-[338px] md:w-[292px] w-[220px] md:h-[66px] h-[43px] md:text-[26px] text-[20px] text-slate-50 text-center hero__link">Связаться с нами</a>
                 </div>
-                <picture class="absolute sm:flex hidden bottom-0 right-[5px] hero__picture">
+                <picture class="relative bottom-0 lg:order-2 -order-1 hero__picture">
+                    <source srcset="./src/img/hero-mobile.png" media="(max-width: 700px)">
+                    <source srcset="./src/img/hero-1023.png" media="(max-width: 1023px)">
+                    <!-- <source srcset="./src/img/hero-1024.png" media="(max-width: 1023px)"> -->
+                    <source srcset="./src/img/hero-1440.png" media="(max-width: 1279px)">
+                    <img src="./src/img/hero.png" alt="logo">
+                </picture>
+                <!-- <picture class="absolute sm:flex hidden bottom-0 right-[5px] hero__picture">
                     <source srcset="./src/img/hero-bg-320.svg" media="(max-width: 640px)" type="image/svg+xml">
                     <source srcset="./src/img/hero-bg-768.svg" media="(max-width: 1024px)" type="image/svg+xml">
                     <source srcset="./src/img/hero-bg-1024.svg" media="(max-width: 1280px)" type="image/svg+xml">
                     <img src="./src/img/hero-bg.svg" alt="">
-                </picture>
+                </picture> -->
             </div>
         </section>
-        <section class="services">
+        <section class="services" id="services">
             <div class="flex flex-col items-center container m-auto 2xl:py-[80px] xl:py-[70px] sm:py-[60px] py-[37px] services__container">
                 <h2 class="lg:mb-[50px] md:mb-[66px] mb-[54px] lg:text-[47px] sm:text-[30px] text-[22px] services__title">Наши услуги</h2>
                 <ul class="flex sm:flex-row flex-col sm:items-start items-center justify-between md:mb-[17px] mb-[23px] xl:max-w-[920px] lg:max-w-[750px] md:max-w-[576px] w-full sm:min-h-0 min-h-[490px] xl:text-[24px] lg:text-[20px] text-[17px] text-center text-slate-500 services__list">
@@ -81,14 +89,14 @@
                 <span class="xl:text-[34px] lg:text-[32px] sm:text-[27px] text-[14px] text-slate-50 price__span">*Цены могут отличаться от заявленных, в зависимости от сложности проекта.</span>
             </div>
         </section>
-        <section class="form">
-            <div class="m-auto py-[70px] container form__container">
-                <h2 class="mb-[35px] lg:text-[47px] sm:text-[30px] text-[22px] text-center form__title">Связаться с нами</h2>
-                <form class="flex flex-col form__form" method="post" action="/">
-                    <input class="flex mb-[30px] py-[12px] px-[33px] max-w-[462px] w-full h-[50px] form__input" type="text" name="name" id="" placeholder="Введите ваше имя">
-                    <input class="flex mb-[30px] py-[12px] px-[33px] max-w-[462px] w-full h-[50px] form__input" type="text" name="email" id="" placeholder="Введите ваш email">
-                    <textarea class="flex mb-[22px] py-[12px] px-[33px] max-w-[462px] w-full h-[125px] form__textarea" name="comment" id="" cols="30" rows="10" placeholder="Введите ваш комментарий"></textarea>
-                    <input class=" w-[215px] h-[65px] text-[21px] text-slate-50 form__submit" type="submit" value="Отправить">
+        <section class="form" id="form">
+            <div class="flex flex-col items-center m-auto py-[70px] container form__container">
+                <h2 class="mb-[35px] lg:text-[47px] sm:text-[30px] text-[22px] form__title">Связаться с нами</h2>
+                <form class="flex flex-col max-w-[500px] w-full form__form" method="post" action="/">
+                    <input class=" mb-[30px] py-[12px] px-[33px] w-full h-[50px] form__input" type="text" name="name" id="" placeholder="Введите ваше имя">
+                    <input class=" mb-[30px] py-[12px] px-[33px] w-full h-[50px] form__input" type="text" name="email" id="" placeholder="Введите ваш email">
+                    <textarea class="mb-[22px] py-[12px] px-[33px] w-full h-[125px] form__textarea" name="comment" id="" cols="30" rows="10" placeholder="Введите ваш комментарий"></textarea>
+                    <input class="w-[215px] h-[65px] text-[21px] text-slate-50 form__submit" type="submit" value="Отправить">
                 </form>
             </div>
         </section>
