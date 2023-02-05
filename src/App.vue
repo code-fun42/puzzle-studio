@@ -18,6 +18,27 @@ import SectionFooter from './components/SectionFooter.vue';
 export default {
   components: {
     SectionHeader, SectionHero, SectionServices, SectionPrice, SectionForm, SectionFooter
+  },
+  data() {
+    return {
+      displayWidth: window.screen.width,
+      componentsArr: [SectionHeader, SectionHero, SectionServices, SectionPrice, SectionForm, SectionFooter]
+    }
+  },
+  methods: {
+    eventResize() {
+      console.log(this);
+    },
+    add() {
+      console.log(this);
+      console.log(this.componentsArr);
+    }
+  },
+  mounted() {
+    // console.log(this);
+    // for (let component of this.componentsArr) {
+    //   console.log(component)
+    // }
   }
 }
 </script>

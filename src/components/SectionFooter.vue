@@ -3,13 +3,15 @@
     <div class="flex justify-between flex-wrap sm:flex-row flex-col m-auto sm:py-[50px] py-[30px] sm:min-h-0 min-h-[330px] container footer__container">
         <nav class="footer__nav">
             <ul class="text-[21px] text-slate-500 footer__nav-list">
-                <li class="footer__nav-item"><a href="" class="footer__nav-link">Услуги</a></li>
-                <li class="footer__nav-item"><a href="" class="footer__nav-link">Цены</a></li>
+                <li v-for="item in menuList" class="footer__nav-item"><a href="" class="footer__nav-link">{{ item }}</a></li>
             </ul>
         </nav>
         <ul class="flex flex-col justify-between min-h-[70px] text-[21px] footer__contacts-list">
-            <li class="pl-[40px] footer__contacts-item footer__contacts-item-1"><a href="tel:+79991573473" class="footer__link">8(999)-517-34-73</a></li>
-            <li class="pl-[40px] footer__contacts-item footer__contacts-item-2"><a href="mailto:" class="footer__link"></a>test@gmail.com</li>
+            <li v-for="item in menuContacts" class="pl-[40px] footer__contacts-item" v-bind:class="item.className">
+                <a v-bind:href="item.href" class="footer__link">{{ item.text }}</a>
+            </li>
+            <!-- <li class="pl-[40px] footer__contacts-item footer__contacts-item-1"><a href="tel:+79991573473" class="footer__link">8(999)-517-34-73</a></li>
+            <li class="pl-[40px] footer__contacts-item footer__contacts-item-2"><a href="mailto:test@gmail.com" class="footer__link"></a>test@gmail.com</li> -->
         </ul>
         <ul class="flex justify-between max-w-[157px] w-full footer__socnet-list">
             <li class="footer__socnet-item"><a href="https://vk.com/agent_nato" class="footer__socnet-link">
@@ -31,7 +33,23 @@
 
 <script>
 export default {
-
+    data() {
+        return {
+            menuList: ['Услуги', 'Цены'],
+            menuContacts: [
+                {
+                    className: 'footer__contacts-item-1',
+                    href: 'tel:+79991573473',
+                    text: '8(999)-517-34-73'
+                },
+                {
+                    className: 'footer__contacts-item-2',
+                    href: 'mailto:test@gmail.com',
+                    text: 'test@gmail.com'
+                },
+            ]
+        }
+    }
 }
 </script>
 
