@@ -13,6 +13,7 @@
 }
 
 .header__burger-line {
+    transform-origin: center;
     background: linear-gradient(91.01deg, #04026A 22.55%, #FF5C01 108.51%);
     transition: top .3s linear, right .3s linear, transform .3s linear, opacity .3s linear;
 }
