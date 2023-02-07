@@ -21,24 +21,35 @@ export default {
   },
   data() {
     return {
-      displayWidth: window.screen.width,
-      componentsArr: [SectionHeader, SectionHero, SectionServices, SectionPrice, SectionForm, SectionFooter]
+      linkScroll: 'test',
+      a: 5
     }
   },
   methods: {
-    eventResize() {
-      console.log(this);
-    },
-    add() {
-      console.log(this);
-      console.log(this.componentsArr);
+    // метод плавного скролла
+    scroll() {
+    this.linkScroll = document.querySelectorAll(".link-scroll");
+    // прохожусь по ссылкам
+    this.linkScroll.forEach((link) => {
+      // вешаю на них события
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        let href = this.getAttribute("href").substring(1);
+        const scrollTarget = document.getElementById(href);
+        const displayWidth = window.screen.width
+        const elemPosition = displayWidth > 640 ? scrollTarget.getBoundingClientRect().top - 96 : scrollTarget.getBoundingClientRect().top - 64;
+
+        window.scrollBy({
+          top: elemPosition,
+          behavior: "smooth",
+        });
+      });
+    });
     }
   },
   mounted() {
-    // console.log(this);
-    // for (let component of this.componentsArr) {
-    //   console.log(component)
-    // }
+    this.linkScroll = document.querySelectorAll('.link-scroll');
+    this.scroll()
   }
 }
 </script>

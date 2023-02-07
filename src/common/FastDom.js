@@ -55,6 +55,10 @@ class FastDom {
     return this;
   }
 
+  getStyle() {
+    return window.getComputedStyle(this.$el);
+  }
+
   // метод добавления событий
   on(eventType, callback) {
     this.$el.addEventListener(eventType, callback);
@@ -83,9 +87,9 @@ class FastDom {
   // метод по работе с атрибутами
   attribute(name, value) {
     if (value) {
-      this.$el.setAttribute(name, value)
+      this.$el.setAttribute(name, value);
     }
-    return this.$el.getAttribute(name)
+    return this.$el.getAttribute(name);
   }
 
   // метод для получения коллекции ноды с дочерними элементами
@@ -94,7 +98,7 @@ class FastDom {
   }
 
   getChildren() {
-    return this.$el.children
+    return this.$el.children;
   }
 }
 
