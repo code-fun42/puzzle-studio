@@ -8,4 +8,17 @@
     html {
         -webkit-tap-highlight-color: transparent;
     }
+
+    a {
+        outline: none;
+    }
+
+    input {
+        outline: none;
+    }
+    
+    textarea {
+        outline: none;
+
+    }
 }
