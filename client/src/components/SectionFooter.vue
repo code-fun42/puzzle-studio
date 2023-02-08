@@ -1,0 +1,125 @@
+<template>
+  <div class="footer">
+    <div
+      class="flex justify-between flex-wrap sm:flex-row flex-col m-auto sm:py-[50px] py-[30px] sm:min-h-0 min-h-[450px] container footer__container"
+    >
+      <nav class="footer__nav">
+        <ul class="text-[21px] text-slate-500 footer__nav-list">
+          <li
+            v-for="item in menuList"
+            v-bind:class="item.class"
+            class="footer__nav-item"
+          >
+            <a
+              v-bind:href="item.href"
+              class="opacity-50 hover:opacity-100 active:opacity-100 focus:opacity-100 link-scroll footer__nav-link"
+              >{{ item.text }}</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <ul class="flex flex-col min-h-[70px] text-[21px] footer__contacts-list">
+        <li
+          v-for="item in menuContacts"
+          class="pl-[40px] footer__contacts-item"
+          v-bind:class="item.className"
+        >
+          <a v-bind:href="item.href" class="footer__link">{{ item.text }}</a>
+        </li>
+      </ul>
+      <ul class="flex justify-between max-w-[157px] w-full footer__socnet-list">
+        <li class="footer__socnet-item">
+          <a href="https://vk.com/agent_nato" class="footer__socnet-link">
+            <svg
+              width="68"
+              height="68"
+              viewBox="0 0 68 68"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M34 0C15.2221 0 0 15.2221 0 34C0 52.7779 15.2221 68 34 68C52.7779 68 68 52.7779 68 34C68 15.2221 52.7779 0 34 0ZM47.0758 38.3598C47.0758 38.3598 50.0827 41.3277 50.8229 42.7054C50.8442 42.7338 50.8548 42.7621 50.8619 42.7763C51.1629 43.2827 51.2338 43.6758 51.085 43.9698C50.8371 44.4585 49.9871 44.6994 49.6967 44.7206H44.3842C44.0158 44.7206 43.2438 44.625 42.3088 43.9804C41.5898 43.4775 40.8815 42.6523 40.1908 41.8483C39.1602 40.6513 38.2677 39.6171 37.3681 39.6171C37.2539 39.6169 37.1403 39.6348 37.0317 39.6702C36.3517 39.8898 35.4804 40.8602 35.4804 43.4456C35.4804 44.2531 34.8429 44.7171 34.3931 44.7171H31.96C31.1313 44.7171 26.814 44.4267 22.989 40.3927C18.3069 35.4521 14.0923 25.5425 14.0569 25.4504C13.7912 24.8094 14.3402 24.4658 14.9387 24.4658H20.3044C21.0198 24.4658 21.2535 24.9015 21.4165 25.2875C21.6077 25.7373 22.309 27.5258 23.46 29.5375C25.3265 32.8171 26.4704 34.1488 27.3877 34.1488C27.5597 34.1467 27.7286 34.103 27.88 34.0213C29.0771 33.3554 28.854 29.0877 28.8008 28.2023C28.8008 28.0358 28.7973 26.2933 28.1846 25.4575C27.7454 24.8519 26.9981 24.6217 26.5448 24.5367C26.7283 24.2835 26.97 24.0782 27.2496 23.9381C28.0712 23.5273 29.5517 23.4671 31.0215 23.4671H31.8396C33.4333 23.4883 33.8442 23.591 34.4215 23.7363C35.5902 24.016 35.615 24.7704 35.5123 27.3523C35.4804 28.0854 35.4485 28.9142 35.4485 29.8917C35.4485 30.1042 35.4379 30.3308 35.4379 30.5717C35.4025 31.8856 35.36 33.3767 36.2879 33.9894C36.409 34.0653 36.5488 34.1058 36.6917 34.1063C37.014 34.1063 37.9844 34.1063 40.6123 29.5977C41.4228 28.1465 42.127 26.6386 42.7196 25.0856C42.7727 24.9935 42.9285 24.7102 43.1127 24.6004C43.2486 24.5311 43.3993 24.4959 43.5519 24.4977H49.8596C50.5467 24.4977 51.0177 24.6004 51.1063 24.866C51.2621 25.2875 51.0779 26.5731 48.1985 30.4725L46.9129 32.169C44.3027 35.5902 44.3027 35.7637 47.0758 38.3598Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="footer__socnet-item">
+          <a href="https://t.me/Typeerror_const" class="footer__socnet-link">
+            <svg
+              width="68"
+              height="68"
+              viewBox="0 0 68 68"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M23.12 36.04L42.5 23.8C43.86 23.46 44.54 23.46 43.52 24.48L26.86 39.44L26.18 46.24L23.12 36.04Z"
+                fill="currentColor"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M34 0C15.3 0 0 15.3 0 34C0 52.7 15.3 68 34 68C52.7 68 68 52.7 68 34C68 15.3 52.7 0 34 0ZM44.88 48.62L50.66 20.74C51.34 18.02 49.64 17.34 48.28 17.68L13.6 30.94C11.22 31.96 11.22 33.32 13.26 34L22.44 37.06L25.5 47.26C25.84 47.94 25.84 48.62 26.86 48.62C27.54 48.62 27.88 47.94 28.56 47.6C28.9 46.92 30.94 45.22 32.98 43.18L41.82 49.98C43.18 51 44.54 50.66 44.88 48.62Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="py-[16px] text-slate-50 text-center footer__line">
+      © PUZZLE.DEV, 2023
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      menuList: [
+        {
+          text: "О нас",
+          href: "#hero",
+          class: "mb-[10px]",
+        },
+        {
+          text: "Услуги",
+          href: "#services",
+          class: "mb-[10px]",
+        },
+        {
+          text: "Цены",
+          href: "#price",
+          class: "mb-[10px]",
+        },
+        {
+          text: "План работы",
+          href: "#plan",
+          class: "mb-[10px]",
+        },
+      ],
+      menuContacts: [
+        {
+          className: "mb-[20px] footer__contacts-item-1",
+          href: "tel:+79991573473",
+          text: "8(999)-517-34-73",
+          // classMb: 'mb-[20px]'
+        },
+        {
+          className: "footer__contacts-item-2",
+          href: "mailto:test@gmail.com",
+          text: "test@gmail.com",
+        },
+      ],
+    };
+  },
+};
+</script>
+
+<style>
+/* @import url('../assets/css/footer.css'); */
+</style>

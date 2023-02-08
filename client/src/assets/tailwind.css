@@ -1,0 +1,24 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+    html {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+        outline: none;
+    }
+
+    input {
+        outline: none;
+    }
+    
+    textarea {
+        outline: none;
+
+    }
+}

@@ -1,0 +1,36 @@
+.header {
+    background-color: #fff;
+    box-shadow: 0px 5px 40px rgb(0 0 0 / 10%);
+}
+
+.header__item:hover > .header__span {
+    width: 100%;
+}
+
+.header__span {
+    background-color: rgb(196, 117, 27);
+    transition: width .3s linear;
+}
+
+.header__burger-line {
+    transform-origin: center;
+    background: linear-gradient(91.01deg, #04026A 22.55%, #FF5C01 108.51%);
+    transition: top .3s linear, right .3s linear, transform .3s linear, opacity .3s linear;
+}
+
+.header__burger-menu {
+    background-color: #fff;
+    box-shadow: 0px 5px 40px rgb(0 0 0 / 10%);
+    transition: right .3s linear;
+}
+
+.header__burger-menu-span {
+    background-color: rgb(196, 117, 27);
+    transition: width .2s linear;    
+}
+
+.header__burger-item:hover > .header__burger-menu-span,
+.header__burger-item:active > .header__burger-menu-span,
+.header__burger-item:focus > .header__burger-menu-span {
+    width: 100%;
+}
