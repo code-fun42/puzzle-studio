@@ -2,16 +2,21 @@
     background-color: #fbfbfb;
 }
 
+.footer__nav-link {
+    transition: opacity .3s linear;
+
+}
+
 .footer__contacts-item {
     background-repeat: no-repeat;
     background-position: left center;
 }
 
-.footer__contacts-item-1 {
+.footer__contacts-item-2 {
     background-image: url('../img/footer-contacts-mail.svg');
 }
 
-.footer__contacts-item-2 {
+.footer__contacts-item-1 {
     background-image: url('../img/footer-contacts-tel.svg');
 }
 

@@ -11,8 +11,8 @@
                 v-bind:class="item.className">{{ item.text }}
             </li>
         </ul>
-        <a href="#"
-            class="md:pt-2.5 pt-1 2xl:w-[338px] md:w-[292px] w-[220px] md:h-[66px] h-[43px] md:text-[26px] text-[20px] text-slate-50 text-center services__link">Связаться
+        <a href="#form"
+            class="md:pt-[10px] pt-[4px] 2xl:w-[338px] md:w-[292px] w-[220px] md:h-[66px] h-[43px] md:text-[26px] text-[20px] text-slate-50 text-center link-scroll services__link">Связаться
             с нами</a>
     </div>
 </div>

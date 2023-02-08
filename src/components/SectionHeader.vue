@@ -8,7 +8,7 @@
                     <img src="../assets/img/header-logo.svg" alt="logo">
                 </picture>
             </a>
-            <nav class="lg:flex items-center max-w-xl w-full hidden header__nav">
+            <nav class="lg:flex items-center max-w-[620px] w-full hidden header__nav">
                 <ul class="flex flex-wrap justify-between w-full items-center header__list text-2xl">
                     <li v-for="item in menuArr" class="header__item">
                         <a v-bind:href="item.href" class="mt-[4px] header__item-link link-scroll">{{ item.text }}</a>
@@ -59,9 +59,13 @@ export default {
                     href: '#price'
                 }, 
                 {
+                    text: 'План работы',
+                    href: '#plan'
+                },
+                {
                     text: 'Контакты',
                     href: '#form'
-                }
+                },
             ],
             burgerStatus: false,
             classBurgerLines: {

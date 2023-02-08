@@ -11,89 +11,57 @@
       <div class="w-full md:min-h-[353px] swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="2xl:max-w-[752px] xl:max-w-[650px] w-full swiper-slide">
+          <div v-for="item in sliders" class="2xl:max-w-[752px] xl:max-w-[650px] w-full swiper-slide">
             <div
-              class="flex flex-col items-center md:py-[30px] py-[25px] md:px-[77px] px-[25px] md:min-h-[353px] plan__slide"
+              class="flex flex-col items-center md:py-[30px] py-[30px] md:px-[77px] px-[30px] md:min-h-[353px] plan__slide"
             >
               <h3
                 class="sm:mb-[20px] mb-[15px] md:text-[37px] lg:text-[30px] sm:text-[27px] text-[20px] text-slate-50 plan__slide-title"
               >
-                Шаг 1
+                {{ item.title }}
               </h3>
               <span
                 class="lg:text-[29px] md:text-[25px] text-[17px] text-slate-50 plan__slide-span"
-                >Состаляем ТЗ. Если возникают сложности - не проблема, по
-                наводящим вопросам поможем составить ТЗ. Анализируем
-                конкурентов</span
-              >
-            </div>
-          </div>
-          <div class="2xl:max-w-[752px] xl:max-w-[650px] w-full swiper-slide">
-            <div
-              class="flex flex-col items-center md:py-[30px] py-[25px] md:px-[77px] px-[25px] md:min-h-[353px] plan__slide"
-            >
-              <h3
-                class="sm:mb-[20px] mb-[15px] md:text-[37px] lg:text-[30px] sm:text-[27px] text-[20px] text-slate-50 plan__slide-title"
-              >
-                Шаг 2
-              </h3>
-              <span
-                class="lg:text-[29px] md:text-[25px] text-[17px] text-slate-50 plan__slide-span"
-                >Состаляем ТЗ. Если возникают сложности - не проблема, по
-                наводящим вопросам поможем составить ТЗ. Анализируем
-                конкурентов</span
-              >
-            </div>
-          </div>
-          <div class="2xl:max-w-[752px] xl:max-w-[650px] w-full swiper-slide">
-            <div
-              class="flex flex-col items-center md:py-[30px] py-[25px] md:px-[77px] px-[25px] md:min-h-[353px] plan__slide"
-            >
-              <h3
-                class="sm:mb-[20px] mb-[15px] md:text-[37px] lg:text-[30px] sm:text-[27px] text-[20px] text-slate-50 plan__slide-title"
-              >
-                Шаг 3
-              </h3>
-              <span
-                class="lg:text-[29px] md:text-[25px] text-[17px] text-slate-50 plan__slide-span"
-                >Состаляем ТЗ. Если возникают сложности - не проблема, по
-                наводящим вопросам поможем составить ТЗ. Анализируем
-                конкурентов</span
-              >
-            </div>
-          </div>
-          <div class="2xl:max-w-[752px] xl:max-w-[650px] w-full swiper-slide">
-            <div
-              class="flex flex-col items-center md:py-[30px] py-[25px] md:px-[77px] px-[25px] md:min-h-[353px] plan__slide"
-            >
-              <h3
-                class="sm:mb-[20px] mb-[15px] md:text-[37px] lg:text-[30px] sm:text-[27px] text-[20px] text-slate-50 plan__slide-title"
-              >
-                Шаг 4
-              </h3>
-              <span
-                class="lg:text-[29px] md:text-[25px] text-[17px] text-slate-50 plan__slide-span"
-                >Состаляем ТЗ. Если возникают сложности - не проблема, по
-                наводящим вопросам поможем составить ТЗ. Анализируем
-                конкурентов</span
+                >{{ item.text }}</span
               >
             </div>
           </div>
           <!-- ... -->
         </div>
         <!-- If we need pagination -->
-        <div class="plan__swiper-pagination swiper-pagination"></div>
+        <!-- <div class="plan__swiper-pagination swiper-pagination"></div> -->
 
         <!-- If we need navigation buttons -->
-        <div class="plan__swiper-button-prev swiper-button-prev"></div>
-        <div class="plan__swiper-button-next swiper-button-next"></div>
+        <!-- <div class="plan__swiper-button-prev swiper-button-prev"></div>
+        <div class="plan__swiper-button-next swiper-button-next"></div> -->
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
+  data() {
+    return {
+      sliders: [
+        {
+          title: 'Шаг 1',
+          text: 'Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов',
+        },
+        {
+          title: 'Шаг 2',
+          text: 'Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов',
+        },
+        {
+          title: 'Шаг 3',
+          text: 'Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов',
+        },
+        {
+          title: 'Шаг 4',
+          text: 'Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов',
+        },
+      ]
+    }
+  },
   methods: {
     swiperInit() {
       // console.log(document.querySelector('.swiper'))
@@ -110,7 +78,7 @@ export default {
         breakpoints: {
           // when window width is >= 320px
           320: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.2,
             spaceBetween: 15,
           },
           // when window width is >= 480px
@@ -155,10 +123,10 @@ export default {
         // },
 
         // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
       });
     },
   },
