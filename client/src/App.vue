@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      linkScroll: "test",
+      linkScroll: "",
     };
   },
   methods: {
