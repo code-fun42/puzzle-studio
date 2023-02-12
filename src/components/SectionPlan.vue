@@ -11,7 +11,10 @@
       <div class="w-full md:min-h-[353px] swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-          <div v-for="item in sliders" class="2xl:max-w-[752px] xl:max-w-[650px] w-full swiper-slide">
+          <div
+            v-for="item in sliders"
+            class="2xl:max-w-[752px] xl:max-w-[650px] w-full swiper-slide"
+          >
             <div
               class="flex flex-col items-center md:py-[30px] py-[30px] md:px-[77px] px-[30px] md:min-h-[353px] plan__slide"
             >
@@ -39,34 +42,33 @@
   </div>
 </template>
 <script>
+import Swiper from "swiper";
+
 export default {
   data() {
     return {
       sliders: [
         {
-          title: 'Шаг 1',
-          text: 'Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов',
+          title: "Шаг 1",
+          text: "Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов",
         },
         {
-          title: 'Шаг 2',
-          text: 'Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов',
+          title: "Шаг 2",
+          text: "Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов",
         },
         {
-          title: 'Шаг 3',
-          text: 'Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов',
+          title: "Шаг 3",
+          text: "Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов",
         },
         {
-          title: 'Шаг 4',
-          text: 'Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов',
+          title: "Шаг 4",
+          text: "Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов",
         },
-      ]
-    }
+      ],
+    };
   },
   methods: {
     swiperInit() {
-      // console.log(document.querySelector('.swiper'))
-      // console.log(new Swiper('.swiper'));
-
       const swiper = new Swiper(".swiper", {
         // Optional parameters
         slidesPerView: 2.5,
