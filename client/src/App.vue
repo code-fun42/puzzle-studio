@@ -49,7 +49,7 @@ export default {
             displayWidth > 640
               ? scrollTarget.getBoundingClientRect().top - 96
               : scrollTarget.getBoundingClientRect().top - 64;
-
+          
           window.scrollBy({
             top: elemPosition,
             behavior: "smooth",

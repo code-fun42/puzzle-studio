@@ -1,22 +1,22 @@
-const express: any = require("express");
-const path: any = require("path");
-const cors: any = require("cors");
-const formidable: any = require("formidable");
+import express from "express";
+import path from "path";
+import cors from "cors";
+import formidable from "formidable";
 
-const app: any = express();
+const app = express();
 
 app.use(cors());
 
 app.use(express.json());
 app.use(express.text());
 
-const pathSrc: String = path.resolve(__dirname + "/../client/dist/");
+const pathSrc: string = path.resolve(__dirname + "/../client/dist/");
 
 app.use("/", express.static(pathSrc));
 
 const PORT = 8000;
 
-const pathHtml: String = path.resolve(__dirname + "/../client/dist/index.html");
+const pathHtml: string = path.resolve(__dirname + "/../client/dist/index.html");
 console.log(pathHtml);
 
 app.get("/", function (req: any, res: any) {

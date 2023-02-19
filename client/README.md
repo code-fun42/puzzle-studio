@@ -1,19 +1,19 @@
-# Puzzle studio
+# vue-ts
 
-## Project setup (Установить зависимости)
+## Project setup
 ```
-npm i
+npm install
 ```
 
-### Compiles and hot-reloads for development (Запустить дев-сервер)
+### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production (Сбилдить проект)
+### Compiles and minifies for production
 ```
 npm run build
 ```
 
-### Customize configuration (Кастомная конфигурация)
+### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
