@@ -9,14 +9,13 @@
         План работы
       </h2>
       <div class="w-full md:min-h-[353px] swiper">
-        <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <div
             v-for="item in sliders"
             class="2xl:max-w-[752px] xl:max-w-[650px] w-full swiper-slide"
           >
             <div
-              class="flex flex-col items-center md:py-[30px] py-[30px] md:px-[77px] px-[30px] md:min-h-[353px] plan__slide"
+              class="flex flex-col items-center md:py-[30px] py-[30px] md:px-[77px] px-[30px] md:min-h-[353px] sm:min-h-[250px] min-h-[220px] plan__slide"
             >
               <h3
                 class="sm:mb-[20px] mb-[15px] md:text-[37px] lg:text-[30px] sm:text-[27px] text-[20px] text-slate-50 plan__slide-title"
@@ -29,14 +28,7 @@
               >
             </div>
           </div>
-          <!-- ... -->
         </div>
-        <!-- If we need pagination -->
-        <!-- <div class="plan__swiper-pagination swiper-pagination"></div> -->
-
-        <!-- If we need navigation buttons -->
-        <!-- <div class="plan__swiper-button-prev swiper-button-prev"></div>
-        <div class="plan__swiper-button-next swiper-button-next"></div> -->
       </div>
     </div>
   </div>
@@ -50,45 +42,41 @@ export default {
       sliders: [
         {
           title: "Шаг 1",
-          text: "Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов",
+          text: "Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам помогаем составить ТЗ.",
         },
         {
           title: "Шаг 2",
-          text: "Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов",
+          text: "Создаем дизайн-макет вашего продукта, анализируем конкурентов. После этого вносим правки.",
         },
         {
           title: "Шаг 3",
-          text: "Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов",
+          text: "Продумываем техническую часть проекта и начинаем разрабатывать продукт.",
         },
         {
           title: "Шаг 4",
-          text: "Состаляем ТЗ. Если возникают сложности - не проблема, по наводящим вопросам поможем составить ТЗ. Анализируем конкурентов",
+          text: "Вносим финальная правки и сдаем продукт!",
         },
       ],
     };
   },
   methods: {
+    // метод, который инициализирует либу swiper
     swiperInit() {
       const swiper = new Swiper(".swiper", {
-        // Optional parameters
         slidesPerView: 2.5,
         spaceBetween: 50,
         direction: "horizontal",
         loop: false,
         centeredSlides: true,
-        // centeredSlidesBounds: true,
         breakpoints: {
-          // when window width is >= 320px
           320: {
             slidesPerView: 1.2,
             spaceBetween: 15,
           },
-          // when window width is >= 480px
           480: {
             slidesPerView: 1.2,
             spaceBetween: 20,
           },
-          // when window width is >= 640px
           640: {
             slidesPerView: 1.2,
             spaceBetween: 30,
@@ -118,17 +106,6 @@ export default {
             spaceBetween: 45,
           },
         },
-
-        // // If we need pagination
-        // pagination: {
-        //   el: ".swiper-pagination",
-        // },
-
-        // Navigation arrows
-        // navigation: {
-        //   nextEl: ".swiper-button-next",
-        //   prevEl: ".swiper-button-prev",
-        // },
       });
     },
   },
@@ -137,4 +114,6 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+@import url("@/assets/css/plan.css");
+</style>

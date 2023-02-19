@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import SectionHeader from "./components/SectionHeader.vue";
-import SectionHero from "./components/SectionHero.vue";
-import SectionServices from "./components/SectionServices.vue";
-import SectionPlan from "./components/SectionPlan.vue";
-import SectionPrice from "./components/SectionPrice.vue";
-import SectionForm from "./components/SectionForm.vue";
-import SectionFooter from "./components/SectionFooter.vue";
+import SectionHeader from "@/components/SectionHeader.vue";
+import SectionHero from "@/components/SectionHero.vue";
+import SectionServices from "@/components/SectionServices.vue";
+import SectionPlan from "@/components/SectionPlan.vue";
+import SectionPrice from "@/components/SectionPrice.vue";
+import SectionForm from "@/components/SectionForm.vue";
+import SectionFooter from "@/components/SectionFooter.vue";
 
 export default {
   components: {
@@ -35,8 +35,8 @@ export default {
   methods: {
     // метод плавного скролла
     scroll() {
+      // получаю NodeList ссылок навигационных блоков
       this.linkScroll = document.querySelectorAll(".link-scroll");
-      
       // прохожусь по ссылкам
       this.linkScroll.forEach((link) => {
         // вешаю на них события
@@ -59,12 +59,9 @@ export default {
     },
   },
   mounted() {
-    this.linkScroll = document.querySelectorAll(".link-scroll");
     this.scroll();
   },
 };
 </script>
 
-<style>
-@import url("./assets/css/global.css");
-</style>
+<style></style>

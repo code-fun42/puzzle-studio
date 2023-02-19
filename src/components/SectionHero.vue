@@ -15,11 +15,7 @@
           id="hero__span-typed"
         >
         </span>
-        <a
-          href="#form"
-          class="md:pt-[10px] pt-[4px] 2xl:w-[338px] md:w-[292px] w-[220px] md:h-[66px] h-[43px] md:text-[26px] text-[20px] text-slate-50 text-center link-scroll hero__link"
-          >Связаться с нами</a
-        >
+        <elem-link :dataLink="dataLink"></elem-link>
       </div>
       <picture class="relative bottom-0 lg:order-2 -order-1 hero__picture">
         <source
@@ -45,21 +41,25 @@ import Typed from "typed.js";
 
 export default {
   data() {
-    return {};
+    return {
+      dataLink: {
+        text: "Связаться с нами",
+        href: "#form",
+      },
+    };
   },
   methods: {
-    // Привет!<br/>Мы студия &lt PUZZLE.DEV /&gt ^60000
+    // метод, который инициализирует либу typed-js
     typedInit() {
-      var typed = new Typed("#hero__title-typed", {
+      const typed = new Typed("#hero__title-typed", {
         strings: [`Привет!<br/>Мы студия PUZZLE.DEV ^60000`],
         typeSpeed: 20,
         showCursor: false,
         loop: true,
         loopCount: Infinity,
       });
-      var typed2 = new Typed("#hero__span-typed", {
+      const typed2 = new Typed("#hero__span-typed", {
         strings: [
-          "^1500 разрабатываем digital-продукты, за плечами большой опыт в разработке. ^5000",
           "Полный цикл разработки, начиная от помощи в составлении тз до сдачи проекта. ^5000",
           "Индивидуальный подход к каждому клиенту, доработка существующего сайта. ^5000",
           "Разработка ботов для любой социальной сети под любые задачи. ^5000",
@@ -77,4 +77,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@import url("@/assets/css/hero.css");
+</style>
