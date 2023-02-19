@@ -1,30 +1,67 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <SectionHeader></SectionHeader>
+  <SectionHero></SectionHero>
+  <SectionServices></SectionServices>
+  <SectionPlan></SectionPlan>
+  <SectionPrice></SectionPrice>
+  <SectionForm></SectionForm>
+  <SectionFooter></SectionFooter>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import SectionHeader from "@/components/SectionHeader.vue";
+import SectionHero from "@/components/SectionHero.vue";
+import SectionServices from "@/components/SectionServices.vue";
+import SectionPlan from "@/components/SectionPlan.vue";
+import SectionPrice from "@/components/SectionPrice.vue";
+import SectionForm from "@/components/SectionForm.vue";
+import SectionFooter from "@/components/SectionFooter.vue";
 
-nav {
-  padding: 30px;
-}
+export default {
+  components: {
+    SectionHeader,
+    SectionHero,
+    SectionServices,
+    SectionPlan,
+    SectionPrice,
+    SectionForm,
+    SectionFooter,
+  },
+  data() {
+    return {
+      linkScroll: "",
+    };
+  },
+  methods: {
+    // метод плавного скролла
+    scroll() {
+      // получаю NodeList ссылок навигационных блоков
+      this.linkScroll = document.querySelectorAll(".link-scroll");
+      // прохожусь по ссылкам
+      this.linkScroll.forEach((link) => {
+        // вешаю на них события
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          const href = this.getAttribute("href").substring(1);
+          const scrollTarget = document.getElementById(href);
+          const displayWidth = window.screen.width;
+          const elemPosition =
+            displayWidth > 640
+              ? scrollTarget.getBoundingClientRect().top - 96
+              : scrollTarget.getBoundingClientRect().top - 64;
+          
+          window.scrollBy({
+            top: elemPosition,
+            behavior: "smooth",
+          });
+        });
+      });
+    },
+  },
+  mounted() {
+    this.scroll();
+  },
+};
+</script>
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<style></style>
