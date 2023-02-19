@@ -1,34 +1,25 @@
 .hero {
-    background-color: #fbfbfb;
+  background-color: #fbfbfb;
 }
 
 .hero__picture {
-    transition: bottom .3s linear;
+  transition: bottom 0.3s linear;
 }
-
-/* @media (max-width: 1024px) {
-    .hero__picture:hover,
-    .hero__picture:active,
-    .hero__picture:focus {
-        margin-bottom: 40px;
-    }
-} */
 
 @media (min-width: 1024px) {
-    .hero__picture:hover {
-        bottom: 20px;
-    }
+  .hero__picture:hover {
+    bottom: 20px;
+  }
 }
 
-
 .hero__link {
-    background-color: #AB3E00;
-    border-radius: 10px;
-    transition: background-color .3s linear;
+  background-color: #ab3e00;
+  border-radius: 10px;
+  transition: background-color 0.3s linear;
 }
 
 .hero__link:hover,
 .hero__link:active,
 .hero__link:focus {
-    background-color: rgb(196, 117, 27);
+  background-color: rgb(196, 117, 27);
 }

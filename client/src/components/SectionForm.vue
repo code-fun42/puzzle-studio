@@ -63,20 +63,19 @@ export default {
     };
   },
   methods: {
-    
     async submit(event) {
       event.preventDefault();
       if (this.checkForm()) {
         axios
           .post("http://localhost:8000/form", new FormData(event.target))
           .then((data) => {
-            this.inputsArr.forEach(input => input.model = '')
-            this.textareaModel = ''
-            alert('Спасибо! Наш специалист с Вами свяжется в скоро времени.')
-            return data
+            this.inputsArr.forEach((input) => (input.model = ""));
+            this.textareaModel = "";
+            alert("Спасибо! Наш специалист с Вами свяжется в скоро времени.");
+            return data;
           })
           .catch((err) => {
-            alert('Пожалуйста, повторите попытку')
+            alert("Пожалуйста, повторите попытку");
             console.error(err);
           });
       } else {
@@ -98,5 +97,5 @@ export default {
 </script>
 
 <style>
-/* @import url('../assets/css/form.css'); */
+@import url("@/assets/css/form.css");
 </style>

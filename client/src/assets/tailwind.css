@@ -5,20 +5,19 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        -webkit-tap-highlight-color: transparent;
-    }
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
 
-    a {
-        outline: none;
-    }
+  a {
+    outline: none;
+  }
 
-    input {
-        outline: none;
-    }
-    
-    textarea {
-        outline: none;
+  input {
+    outline: none;
+  }
 
-    }
+  textarea {
+    outline: none;
+  }
 }

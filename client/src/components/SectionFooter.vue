@@ -107,7 +107,6 @@ export default {
           className: "mb-[20px] footer__contacts-item-1",
           href: "tel:+79991573473",
           text: "8(999)-517-34-73",
-          // classMb: 'mb-[20px]'
         },
         {
           className: "footer__contacts-item-2",
@@ -121,5 +120,5 @@ export default {
 </script>
 
 <style>
-/* @import url('../assets/css/footer.css'); */
+@import url("@/assets/css/footer.css");
 </style>
